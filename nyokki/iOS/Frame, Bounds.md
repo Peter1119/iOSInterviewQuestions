@@ -54,7 +54,7 @@ class ViewController: UIViewController {
 }
 ```
 
-<img src="https://user-images.githubusercontent.com/78390837/126594190-52651507-fd6e-4a75-9c28-16a6e5d212b7.png" width="80%"/>
+<img src="https://user-images.githubusercontent.com/78390837/126594190-52651507-fd6e-4a75-9c28-16a6e5d212b7.png" width="30%"/>
 
 위 코드로 알게 된 점은 2번 질문에 관한 것인데 수치는 절대적인 값이다. 만일 view 보다 yellow인 superView의 Size가 더 크다면 화면을 넘어가게 된다. (여기서 화면의 크기는 iPhone 11기준 width: 414, height: 819)
 
