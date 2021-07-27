@@ -13,7 +13,7 @@ Frame과 Bounds는 UIView의 instance property로 둘 다 CGRect이다.
 
 App 개발자 문서에는 다음과 같이 나와있다. 
 
-<img src="https://user-images.githubusercontent.com/78390837/126594201-65a68deb-8a92-4639-b971-1015399d4b4d.png" style="zoom: 37%;" />
+<img src="https://user-images.githubusercontent.com/78390837/126594201-65a68deb-8a92-4639-b971-1015399d4b4d.png" style="zoom: 37%;" width="40%"/>
 
 Bounds: **자기 자신의 좌표계**에서 해당 view의 위치와 크기를 나타내는 사각형
 
