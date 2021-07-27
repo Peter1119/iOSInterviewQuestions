@@ -17,7 +17,7 @@ App 개발자 문서에는 다음과 같이 나와있다.
 
 Bounds: **자기 자신의 좌표계**에서 해당 view의 위치와 크기를 나타내는 사각형
 
-<img src="https://user-images.githubusercontent.com/78390837/126594189-fcd9b7a9-53d2-4055-8310-a92b3d33f7da.png" alt="image-20210605175638277" style="zoom:50%;" width = "80%" />
+<img src="https://user-images.githubusercontent.com/78390837/126594189-fcd9b7a9-53d2-4055-8310-a92b3d33f7da.png" alt="image-20210605175638277" style="zoom:50%;" width = "70%" />
 
 Frame: **Superview(상위뷰)**의 좌표계에서 해당 view의 위치와 크기를 나타내는 사각형
 
