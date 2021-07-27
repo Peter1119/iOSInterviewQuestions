@@ -95,7 +95,7 @@ class ViewController: UIViewController {
     
 ```
 
-<img src="https://user-images.githubusercontent.com/78390837/126594191-86a5364c-ad0a-47bc-8431-5303b4284940.png" width="80%" height="50%"/>
+<img src="https://user-images.githubusercontent.com/78390837/126594191-86a5364c-ad0a-47bc-8431-5303b4284940.png" width="100" height="100"/>
 
 자기 자신의 좌표계를 사용한다고 해서 superView의 영향을 받지 않는다고 생각했다. 하지만 yellowView의 bound를 바꾸니 그 subView인 greenView가 영향을 받아 움직였다. 마치 greenView의 point는 핀으로 꽂혀있고 yellowView의 point가 (0, 0)에서 (50, 50)으로 바뀌어서 yellowView의 point가 (0, 0)이던 시점의 point를 찾아가는 것처럼 보인다. 이때 blackView는 View의 subView이므로 yellowView bound에는 영향을 받지 않는다. 
 
