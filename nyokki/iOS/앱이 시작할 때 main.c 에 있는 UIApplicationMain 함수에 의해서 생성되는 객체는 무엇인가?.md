@@ -13,3 +13,45 @@ https://developer.apple.com/documentation/uikit/app_and_environment/responding_t
 5. UIKit calls your app delegate's [`application(_:willFinishLaunchingWithOptions:)`](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623032-application) method.
 6. UIKit performs state restoration, which calls additional methods of your app delegate and view controllers.
 7. UIKit calls your app delegate's [`application(_:didFinishLaunchingWithOptions:)`](https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1622921-application) method .
+
+<img src="https://t1.daumcdn.net/cfile/tistory/992B8C4E5B0A56AF09" alt="img"  />
+
+
+
+# UIApplicationMain(_: _: _: _:)
+
+Creates the application object and the application delegate and sets up the event cycle.
+
+## Declaration
+
+```swift
+func UIApplicationMain(_ argc: Int32, 
+                     _ argv: UnsafeMutablePointer<UnsafeMutablePointer<CChar>?>, 
+                     _ principalClassName: String?, 
+                     _ delegateClassName: String?) -> Int32
+```
+
+\-  **argc** : argv의 개수. 대게 main에 해당하는 파라미터입니다.
+
+\- **argv** : argument의 변수 목록. 대게 main에 해당하는 파라미터입니다.
+
+(C언어에서 main 함수는 프로그램의 진입점이다. int argc는 정보의 갯수를 의미하고 char argv[ ]는 메인함수에 전달되는 실질적인 정보로 문자열의 배열을 의미한다.)
+
+\- **principalClassName** : 
+
+[UIApplication]: https://developer.apple.com/documentation/uikit/uiapplication
+
+클래스 또는 하위 클래스의 이름입니다. nil을 지정하면, UIApplication으로 가정됩니다.
+
+\- **delegateClassName** : application delegate가 인스턴스화 되는 클래스 이름입니다. principalClassName이 UIApplication의 하위클래스를 지정하는 경우, 하위 클래스를 delegate로 지정 할 수 있습니다. 하위클래스 인스턴스는 앱의 delegate 메세지를 받습니다. 앱의 기본 nib파일에서 delegate 객체를 로드하는 경우, nil을 지정합니다.
+
+# UIApplication
+
+> The centralized point of control and coordination for apps running in iOS.
+>
+> (iOS에서 앱을 구동하는데 control하고 조정하는 중앙 지점?)
+
+UIApplicationMain에 의해 생성되는 객체는 UIApplication 객체입니다. iOS앱은 UIApplication이라는 클래스의 객체입니다. 프로젝트의 main 함수는 기본적으로 UIApplication 클래스의 인스턴스를 만들어서 GUI를 사용하기 위한 runloop를 돌려주는 작업을 수행한다. 그 이후 앱 내에서 일어나는 모든 처리는 UIApplication 객체가 관리하게 된다. 
+
+
+
