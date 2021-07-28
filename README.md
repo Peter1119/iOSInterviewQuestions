@@ -1,5 +1,10 @@
 # iOSInterviewQuestions
 
+# 스터디 방식
+- 하루에 3가지 면접 질문에 대해서 정리하여 22시까지 푸쉬한다.
+- 만약 시간 내에 모두 하지 못한 경우에는 10000원의 벌금 부과
+- 22시에 구글밋을 통해 서로 공부한 내용을 번갈아가며 설명을 하고 이 과정에서 보완, 수정한다.
+
 출처 : https://github.com/JeaSungLEE/iOSInterviewquestions
 
 iOS개발자들에게 필요한 자료들을 정리하고 있는 중입니다.
