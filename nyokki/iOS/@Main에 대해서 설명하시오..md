@@ -26,6 +26,12 @@ Type Method
 
 
 
+Xcode 12부터 적용됨 
+
+진입 포인트 마킹 
+
+
+
 참고
 
 https://developer.apple.com/documentation/uikit/uiapplicationdelegate/3656306-main
