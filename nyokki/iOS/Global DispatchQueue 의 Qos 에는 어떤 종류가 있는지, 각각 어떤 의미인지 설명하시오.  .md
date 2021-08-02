@@ -48,7 +48,7 @@ Duration of work to be performed : 작업은 분(minutes) 또는 시간(hour)과
 
 
 
-추가할 사항
+# 추가할 사항
 DispatchQueue.global(qos: .userInteractive).async{} 
 and
 
