@@ -26,13 +26,13 @@
 
 - [x] UIApplication 객체의 컨트롤러 역할은 어디에 구현해야 하는가?
 
-- [ ] App의 Not running, Inactive, Active, Background, Suspended에 대해 설명하시오.
+- [x] App의 Not running, Inactive, Active, Background, Suspended에 대해 설명하시오.
 
 
 
-- [ ] NSOperationQueue 와 GCD Queue 의 차이점을 설명하시오.
+- [x] NSOperationQueue 와 GCD Queue 의 차이점을 설명하시오.
 
-- [ ] GCD API 동작 방식과 필요성에 대해 설명하시오.
+- [x] GCD API 동작 방식과 필요성에 대해 설명하시오.
 
 - [ ] Global DispatchQueue 의 Qos 에는 어떤 종류가 있는지, 각각 어떤 의미인지 설명하시오.
   
