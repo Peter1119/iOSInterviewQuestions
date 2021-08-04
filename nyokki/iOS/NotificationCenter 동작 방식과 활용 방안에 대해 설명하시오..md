@@ -15,3 +15,5 @@ NotificationCenter는 델리게이트 패턴과 함께 어플리케이션 내에
 이벤트가 발생할 객체에 NotificationCenter를 등록시킨다. 
 
 Event에 대한 행동을 취해줄 객체에 observer를 등록시킨다. 
+
+## 활용방안 추가 할것 
