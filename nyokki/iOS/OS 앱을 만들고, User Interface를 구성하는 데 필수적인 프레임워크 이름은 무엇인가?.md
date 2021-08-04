@@ -14,5 +14,5 @@
 
 UIViewController, UIView, UIAlertController 등 앞에 UI가 붙는 클래스들을 사용하려면 반드시 UIKit을 상속해야 한다. 
 
-UIKit은 Foundation을 상속받고 있기 때문에 UIKit을 상속받는 것으로 Foundation 프레임워크를 상속한 결과를 가져온다.
+UIKit은 Foundation을 상속받고 있기 때문에 UIKit을 import하는 것은 Foundation 프레임워크를 import한 결과를 가져온다.
 

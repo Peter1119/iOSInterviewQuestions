@@ -46,3 +46,12 @@ Duration of work to be performed : 작업은 분(minutes) 또는 시간(hour)과
 
 **Unspecified** : 이는 QoS정보가 없음을 나타내며, 환경 QoS(environmental QoS)를 추론해야 한다는 단서를 시스템에 제공합니다. 쓰레드가 기존(legacy) API를 사용하는 경우, Unspecified QoS를 사용할 수 있으며, 이 경우 쓰레드가 QoS를 벗어날 수 있습니다. (기존 API .. ?)
 
+
+
+# 추가할 사항
+DispatchQueue.global(qos: .userInteractive).async{} 
+and
+
+DispatchQueue.main.async{}
+
+의 차이점 
