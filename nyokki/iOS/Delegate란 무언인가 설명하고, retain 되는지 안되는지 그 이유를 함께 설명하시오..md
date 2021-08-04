@@ -29,6 +29,7 @@ Heap이라는 영역에 메모리가 저장되기 위해선 공간이 필요한�
 <img src="https://blog.kakaocdn.net/dn/drOpsX/btqON8au8dV/x6nxnWdWbq4wjey67G5IJ0/img.png" alt="img" style="zoom:50%;" />
 
 여기서 Retain은 위 사진처럼 레퍼런스를 이용하여 인스턴스를 만들때 생겨난다. 
+retain은 ARC에서 참조값을 +1해준다. 참고로 반대는 release로 참조값을 -1해준다. 
 
 인스턴스는 클래스와 같이 추상화된 것으로부터 객체를 만들어 낸 것을 말한다. 
 
