@@ -26,7 +26,7 @@
 - [x]  App Bundle의 구조와 역할에 대해 설명하시오.
 - [x]  모든 View Controller 객체의 상위 클래스는 무엇이고 그 역할은 무엇인가?
 - [x]  자신만의 Custom View를 만들려면 어떻게 해야하는지 설명하시오.
-- [ ]  View 객체에 대해 설명하시오.
+- [x]  View 객체에 대해 설명하시오.
 - [ ]  UIView 에서 Layer 객체는 무엇이고 어떤 역할을 담당하는지 설명하시오.
 - [ ]  UIWindow 객체의 역할은 무엇인가?
 - [ ]  UINavigationController 의 역할이 무엇인지 설명하시오.
