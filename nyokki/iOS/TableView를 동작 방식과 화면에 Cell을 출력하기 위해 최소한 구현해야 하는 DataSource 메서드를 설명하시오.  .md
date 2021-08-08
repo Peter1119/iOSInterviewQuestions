@@ -39,7 +39,7 @@ func tableView(UITableView, numberOfRowsInSection: Int) -> Int
 
 **4. viewWillAppear**
 
-**5. ViewDidAppea**
+**5. ViewDidAppear**
 
 
 
