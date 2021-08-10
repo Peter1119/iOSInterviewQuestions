@@ -54,3 +54,34 @@ HTTP는 클라이언트가 요청(request)을 서버에 보내고, 서버는 클
 
 + 세션 사용 사례
   + 로그인 정보 유지 
+
+
+
+## URLSession이란?
+
+URLSession은 iOS에서 제공하는 HTTP를 이용한 네트워킹을 통해 데이터를 주고받을 수 있게 도와주는 API를 제공해주는 클래스이다. URLSession은 Thread-Safety하기 때문에 어떤 스레드에서든 자유롭게 Session과 Task를 생성할 수 있다. 
+
+
+
+URLSession은 URLSessionConfiguration을 통해 생성할 수 있다. 이렇게 생성된 URLSession을 통해 한 개 이상의 URLSessionTask를 생성할 수 있으며, 이 URLSessionTask를 통해 실제로 서버와 통신을 할 수 있다. 
+
+
+
+#### URLSessionConfiguration
+
++ Default: 기본적인 네트워킹 정책을 사용한다.(?)
++ Ephemeral: 쿠키와 캐시를 저장하지 않을 때 사용한다. (어떤 경우가 있을까?)
++ Background: 앱이 background에 있을 때 컨텐츠를 다운로드 혹은 업로드 할 때 사용한다. 
+
+
+
+#### URLSessionTask
+
+- URLSessionDataTask : 데이터를 받는 작업 수행 시 사용한다. background 세션에 대한 지원을 하지 않는다.
+- URLSessionUploadTask : 데이터 업로드 시 사용
+- URLSessionDownloadTask : 데이터 다운로드 시 사용
+
+
+
+
+
