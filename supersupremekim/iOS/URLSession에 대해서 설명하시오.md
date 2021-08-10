@@ -6,7 +6,7 @@
 
 ### UrlSessionConfiguration을 통해 크게 세 가지 유형의 url session을 생성한다.
 
-### .default 기본, .euhemeral 쿠키나 캐시 저장 안함. background에서도 작업하는 session을 생성할 수 있음.
+### .default 기본, . ephemeral 쿠키나 캐시 저장 안함. background에서도 작업하는 session을 생성할 수 있음.
 
 
 
