@@ -128,3 +128,28 @@ enum Pet {
 + 열거형 자체가 하나의 데이터 타입
 + Extension 가능
 + Stored property 불가능
+
++ Computed Property example 
+
+  ````swift
+  enum ApiError {
+        case NoInternetConnection
+        case AuthenticationFail
+        case ResponseTimeOut
+        var errorMsg: String {
+              switch self {
+              case .NoInternetConnection:
+                   return “Internet connection has problem!”
+              
+              case .AuthenticationFail:
+                   return “Error has Authentication fail!”
+              
+              case .ResponseTimeOut:
+                   return “Too longggggg :P”
+              }
+         }
+  }
+  ````
+
+  
+

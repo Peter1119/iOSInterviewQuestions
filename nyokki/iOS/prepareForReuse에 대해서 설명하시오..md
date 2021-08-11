@@ -1,4 +1,4 @@
-### prepareorReuse가 존재하는 이유 
+### prepareForReuse가 존재하는 이유 
 
 테이블뷰에서 성능을 위해 테이블뷰 셀을 reuse한다. 
 
