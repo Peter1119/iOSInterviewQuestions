@@ -1,5 +1,5 @@
 ## Swift
-[ ] struct와 class와 enum의 차이를 설명하시오.
+- [ ] struct와 class와 enum의 차이를 설명하시오.
 - class의 성능을 향상 시킬수 있는 방법들을 나열해보시오.
 - Convinience init에 대해 설명하시오.
 - Anyobject에 대해 설명하시오.
