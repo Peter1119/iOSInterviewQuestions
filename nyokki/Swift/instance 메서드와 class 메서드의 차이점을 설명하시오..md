@@ -10,7 +10,7 @@
 
 클래스를 위한 타입 메소드는 func 앞에 class 키워드를 작성하여 사용하고 구조체와 열거형을 위한 타입 메소드는 앞에 static 키워드를 작성한다. 
 
-static 키워드가 붙은 메소드는 overrider가 안되며 class를 붙이면 override가 되고 상속이 가능하다. 
+static 키워드가 붙은 메소드는 override가 안되며 class를 붙이면 override가 되고 상속이 가능하다. 
 
 
 
