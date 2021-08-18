@@ -8,7 +8,6 @@
 
 벌금현황  
 홍석현 10000(8/3)
-홍석현 10000(8/9)
 
 출처 : https://github.com/JeaSungLEE/iOSInterviewquestions
 
