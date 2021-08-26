@@ -23,5 +23,5 @@
 - [x] property wrapper에 대해서 설명하시오.
 - [x] Generic에 대해 설명하시오.
 - [x] Result타입에 대해 설명하시오.
-- [ ] Codable에 대하여 설명하시오.
+- [x] Codable에 대하여 설명하시오.
 
