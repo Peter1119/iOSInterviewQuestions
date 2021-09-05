@@ -86,8 +86,6 @@ let cat1 = Cat(name: "Lucy", age: 3)
 
 구조체와 클래스와 달리, 열거형은 저장 프로퍼티를 가질 수 없다. 
 
-??? 그럼 rawValue 는 ? 
-
 ```swift
 enum Pet {
     
