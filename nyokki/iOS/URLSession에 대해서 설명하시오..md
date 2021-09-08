@@ -1,4 +1,4 @@
-사전 지식
+### 사전 지식
 
 참고 : https://jeong-pro.tistory.com/80
 
@@ -54,6 +54,132 @@ HTTP는 클라이언트가 요청(request)을 서버에 보내고, 서버는 클
 
 + 세션 사용 사례
   + 로그인 정보 유지 
+
+
+
+## HTTP 이해하기(+HTTPS)
+
+1. 하이퍼 텍스트
+
+   하이퍼 링크를 통해 한 문서에서 다른 문서로 즉시 접근할 수 있는 비선형적 텍스트. 인터넷과 결합하여 HTML의 주된 구성요소가 되었다. 기존의 문서가 순차적이면서 서열형 구조라면, 하이퍼텍스트는 링크에 따라 그 차례가 바뀌는 임의적이면서 나열형인 구조를 가진다. 
+
+2. HTML
+
+   인터넷 서비스의 하나인 월드 와이드 웹을 통해 볼 수 있는 문서를 만들 때 사용하는 웹 언어의 한 종류이다. 특히 하이퍼텍스트를 작성하기 위해 개발되었으며, 인터넷에서 웹을 통해 접근되는 대부분의 웹 페이지들은 HTML로 작성된다. 
+
+3. 프로토콜
+
+   정보기기 사이(컴퓨터와 컴퓨터, 컴퓨터와 단말기 사이 등)에서 정보교환이 필요한 경우 이를 원활하게 하기 위하여 정한 여러 가지 통신 규칙과 방법에 대한 약속 즉, 통신의 규칙, 규약을 의미한다.
+
+4. URL
+
+   Uniform Resource Locator, 네트워크 상에서 자원이 어디에 있는지를 알려주기 위한 규약, URL은 웹 사이트 주소 뿐만 아니라 컴퓨터 네트워크 상의 자원을 모두 나타낼 수 있다. 그 주소에 접속하려면 해당 URL에 맞는 프로토콜을 알아야 하고, 그와 동일한 프로토콜로 접속해야 한다. 
+
+   ---> &q, &lat, &lot 이런건가..?
+
+### HTTP 개요
+
+HTTP는 HyperText Transfer Protocol의 약자로, 월드와이드웹 상에서 정보를 주고 받을 수 있는 프로토콜이다. 주로 HTML을 주고받는 데 쓰이며, 하이퍼텍스트 문서를 전달하기 위한 규약이라고 할 수 있다. 
+
+
+
+HTTP는 클라이언트와 서버 사이에 이루어지는 **요청/응답(request/response) 프로토콜**이다. 예를 들면, 클라이언트인 웹 브라우저가 HTTP를 통하여 서버로 부터 웹페이지(HTML)나 그림 정보를 요청하면, 서버는 이 요청에 응답하여 필요한 정보를 해당 사용자에게 전달하게 된다. 이 정보가 모니터와 같은 출력 장치를 통해 사용자에게 나타나는 것이다. 
+
+http://, https://로 시작하는 URL이 HTTP 프로토콜로 통신하겠다는 선언이다. 
+
+
+
+### HTTP의 요청(request)와 응답(response)
+
+HTTP는 클라이언트-서버 사이에 이루어지는 요청/응답 프로토콜이라고 했다. 그렇다면 HTTP는 어떻게 요청하고 응답할까? HTTP는 요청과 응답을 위해 클라이언트-서버 간의 요청 메세지와 응답 메세지를 주고 받는다. 메세지는 규칙과 구조가 정해져있다.
+
+<img src="https://odong-tree.github.io/assets/post-img/cs/http2.jpg" alt="http2" style="zoom:33%;" />
+
+위키피디아의 예시인 요청 메세지이다. 
+
+```html
+GET /restapi/v1.0 HTTP/1.1
+Accept: application/json
+Authorization: Bearer UExBMDFUMDRQV1MwMnzpdvtYYNWMSJ7CL8h0zM6q6a9ntw
+```
+
+첫 줄의 요청 라인은 GET/restapi/v1.0 HTTP/1.1은 요청방식/요청URI/HTTP버전 으로 구성되어 있다. GET은 요청 메서드이다. 이 메서드에 따라 서버에 요청하는 성격이 달라진다. 
+
+다음은 응답 메세지이다. 
+
+```html
+HTTP/1.1 200 OK                  				 // 상태 라인
+Date: Mon, 23 May 2005 22:38:34 GMT      // 헤더 시작    
+Content-Type: text/html; charset=UTF-8
+Content-Encoding: UTF-8
+Content-Length: 138
+Last-Modified: Wed, 08 Jan 2003 23:11:55 GMT
+Server: Apache/1.3.3.7 (Unix) (Red-Hat/Linux)
+ETag: "3f80f-1b6-3e1cb03b"
+Accept-Ranges: bytes
+Connection: close       								// 헤더 끝
+																				// 공백
+<html>																	// 바디 시작
+<head>
+  <title>An Example Page</title>
+</head>
+<body>
+  Hello World, this is a very simple HTML document.
+</body>
+</html>																	// 바디 끝 
+```
+
+첫 줄을 살펴보면, HTTP/1.1 200 OK 는 HTTP버전/ 상태 코드/ 응답이유 로 구성되어 있으며, 200은 상태 코드이다. 
+
+
+
+### HTTP 요청 메서드 
+
+- **GET**: 특정한 리소스를 가져오도록 요청. 데이터를 가져올 때만 사용해야함
+- **POST**: 서버로 데이터를 전송(추가, 작성 등). 요청 본문의 유형은 Content-Type 헤더로 나타냄
+- **PUT**: 요청 페이로드를 사용해 새로운 리소스를 생성하거나, 대상 리소스를 나타내는 데이터를 대체 (서버의 데이터를 갱신, 작성 등)
+- **DELETE**: 지정한 리소스를 삭제 (서버의 데이터를 삭제)
+- **HEAD**: 서버 리소스의 헤더를 요청
+- **OPTIONS**: 리소스가 지원하고 있는(서버에서 사용하는) 메서드를 알려줌
+- **PATCH**: 리소스의 부분적인 수정
+- **CONNECT**: 요청한 리소스에 대해 양방향 연결을 시작. 터널을 열기 위해서 사용될 수 있음
+
+#### CRUD
+
+CRUD는 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이터 처리 기능인 Create(생성), Read(읽기), Update(갱신), Delete(삭제)를 묶어서 일컫는 말이다. 위의 HTTP 메서드에서는 POST, GET, PUT, DELETE가 각각 CRUD 기능 역할을 한다..
+
+- Create: POST/PUT
+- Read: GET
+- Update: PUT
+- Delete: DELETE
+
+### 상태 코드
+
+클라이언트가 서버에 요청 메세지를 보내고, 서버는 클라이언트에게 응답 메세지를 보내는데, 이때 응답 내용에 따른 **상태 코드**를 보내게 된다. 상태 코드는 그 종류가 매우 많아서 포스팅에서 다루기보다는 링크를 올려두는 것이 좋을 것 같군요.
+
+모든 HTTP 응답 코드는 5개의 클래스(분류)로 구분됩니다. 상태 코드의 첫 번째 숫자는 응답의 클래스를 정의합니다. 마지막 두 자리는 클래스나 분류 역할을 하지 않습니다. 첫자리에 대한 5가지 값들은 다음과 같습니다.
+
+- **1xx (정보)**: 요청을 받았으며 프로세스를 계속한다
+- **2xx (성공)**: 요청을 성공적으로 받았으며 인식했고 수용하였다
+- **3xx (리다이렉션)**: 요청 완료를 위해 추가 작업 조치가 필요하다
+- **4xx (클라이언트 오류)**: 요청의 문법이 잘못되었거나 요청을 처리할 수 없다
+- **5xx (서버 오류)**: 서버가 명백히 유효한 요청에 대해 충족을 실패했다
+
+
+
+출처 
+
+https://odong-tree.github.io/cs/2021/01/18/http/
+
+참고
+
+https://goddaehee.tistory.com/169
+
+Restful API 
+
+https://wayhome25.github.io/etc/2017/11/26/restful-api-designing-guidelines/
+
+
 
 
 
