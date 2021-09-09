@@ -167,6 +167,12 @@ CRUD는 대부분의 컴퓨터 소프트웨어가 가지는 기본적인 데이�
 
 
 
+### Content-Type이란?
+
+https://juyoung-1008.tistory.com/4
+
+
+
 출처 
 
 https://odong-tree.github.io/cs/2021/01/18/http/
