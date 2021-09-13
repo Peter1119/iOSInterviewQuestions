@@ -10,7 +10,7 @@ Type Method
 @MainActor static func main()
 ```
 
-[`UIApplicationDelegate`](https://developer.apple.com/documentation/uikit/uiapplicationdelegate) 은 UIKit app의 메인 entry point로서 역할을 할 수 있도록 main 메소드를 실행합니다. 이 시스템은 앱을 시작하기 위해 이 매소드를 호출하고 절대로 사용자나 개발자가 직접 호출하지 않습니다. @main 속성이 표시된 앱의 정확히 하나의 entry point를 가질 것입니다. 
+[`UIApplicationDelegate`](https://developer.apple.com/documentation/uikit/uiapplicationdelegate) 은 UIKit app의 메인 entry point로서 역할을 할 수 있도록 main 메소드를 실행한다. 시스템은 앱을 시작하기 위해 이 매소드를 호출하고 절대로 사용자나 개발자가 직접 이 메서드를 호출하지 않는다. @main 어트리뷰트로 표시된 앱에서 정확히 하나의 entry point를 갖는 것이다. 
 
 
 

@@ -29,7 +29,7 @@ func tableView(UITableView, numberOfRowsInSection: Int) -> Int
 
 갑자기 궁금해서 알아본 view, awakeFromNib 호출 타이밍
 
-**호출 순서.**
+**호출 순서**
 
 **1. loadView view**
 
