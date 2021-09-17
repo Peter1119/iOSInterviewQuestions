@@ -31,17 +31,21 @@ Heap이라는 영역에 메모리가 저장되기 위해선 공간이 필요한�
 여기서 Retain은 위 사진처럼 레퍼런스를 이용하여 인스턴스를 만들때 생겨난다. 
 retain은 ARC에서 참조값을 +1해준다. 참고로 반대는 release로 참조값을 -1해준다. 
 
-인스턴스는 클래스와 같이 추상화된 것으로부터 객체를 만들어 낸 것을 말한다. 
-
 <img src="https://blog.kakaocdn.net/dn/bC4uAu/btqOzAGG8HE/4KmPFU9ki5mD9Pxp632BM1/img.png" alt="img" style="zoom:50%;" />
 
 Retain이 필요한 이유는 메모리 누수를 방지하기 위해서 필요하다. 
 
 이 방법은 연결 상태 Strong, Weak , unowned으로 각각 상황에 따라 약하게 연결할지 강하게 연결할지 결정하는 것이다. 
 
+이때 델리게이트는 프로토콜이기 때문에 retain이 발생하지 않는 것일까? 
 
-
-이때 델리게이트는 프로토콜이기 때문에 retain이 발생하지 않는 것일까? 아니다
+델리게이트를 형성하는 것은 해당 프로토콜을 채택한 객체에게 위임을 하는 것이기 때문에 어떤 객체가 델리게이트를 하게 된다면 참조값이 증가한다. 만일 서로가 서로의 대리자가 되어 참조한다면 둘의 참조값이 증가하였기 때문에 두 클래스 모두 해제가 된다고 해도 서로 참조값은 0이 되지 않고 메모리 누수가 생기게 된다. 
 
 클래스에서 프로토콜을 채택할 때에는 Class-only-Protocol이라는 프로토콜을 만들어주어야 하고 이는 클래스 타입으로 만들어지기 때문에 Retain된다.
+
+
+
+참조
+
+https://jwonylee.github.io/iOSInterviewquestions/Delegate-retain
 

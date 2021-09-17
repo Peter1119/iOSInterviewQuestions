@@ -1,7 +1,5 @@
 ## TableView
 
-뷰 컨트롤러는 테이블뷰 데이터소스와 델리게이트를 설정한다. 
-
 테이블뷰 델리게이트 프로토콜에는 필수 구현 메소드는 없으며 테이블뷰 섹션 헤더, 푸터 구성, 셀 삭제 및 재정렬, 테이블 행에서 스와이프 기능 등의 기능을 관리한다. 
 
 테이블뷰 데이터소스 개체는 테이블뷰 데이터소스 프로토콜을 준수하며 다음 두 필수 구현 메소드가 있다.
@@ -31,11 +29,11 @@ func tableView(UITableView, numberOfRowsInSection: Int) -> Int
 
 **호출 순서**
 
-**1. loadView view**
+**1. loadView**
 
-**2. DidLoad**
+**2. viewDidLoad**
 
-**3. awakeFramNib**
+**3. awakeFromNib**
 
 **4. viewWillAppear**
 

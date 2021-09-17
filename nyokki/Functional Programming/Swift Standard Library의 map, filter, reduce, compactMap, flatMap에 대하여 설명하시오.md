@@ -2,6 +2,8 @@
 
 Map 함수는 컨테이너 내부의 기존 데이터를 변형하여 새로운 컨테이너를 생성한다.
 
+기존의 배열의 각 아이템을 새롭게 매핑해서 새로운 배열을 리턴하는 함수이다. 매핑하는 방식은 개발자가 원하는 로직을 클로저로 만든다.
+
 ```swift
 let numbers: [Int] = [0, 1, 2, 3, 4]
 var doubledNums; [Int] = numbers.map({(number: Int) -> Int in 
@@ -98,7 +100,7 @@ Wrapped 과정에서 flatMap은 Optional안에 값이 있다면 추출해서 진
 
 
 
-
+## forEach
 
 
 
