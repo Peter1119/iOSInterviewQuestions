@@ -92,3 +92,9 @@ https://42kchoi.tistory.com/292
 https://jiyeonlab.tistory.com/38
 
 https://youtu.be/M58LqynqQHc
+
+
+
+클린코드 클린 아키텍처 
+
+https://www.youtube.com/watch?v=KUEe1tc2CbE
