@@ -16,6 +16,42 @@
   + 참조 타입은 캡처리스트 내에서 메모리 주소를 캡처하여 weak/unowned 참조 선언이 가능하다. -> 강한 참조를 해결하는 방법이다. 
   + 참고로 캡처리스트에서 바인딩도 가능하다. 
 
+  Swift 5.3 이후 추가된 내용
+
+  + self의 사용 
+
+    ```swift
+    class SomeThing {
+        let name = "누군가"
+        
+        func doSomething() {
+            DispatchQueue.main.async {
+                print("나의 이름은 \(self.name)")
+            }
+        }
+    }
+    ```
+
+    인스턴스 내부 클로저에서 인스턴스의 프로퍼티를 사용하기 위해서는 self.를 붙혀주어야 한다. 
+
+    Swift 5.3에서는 캡처리스트 [self]를 사용하면 self를 붙히지 않아도 된다.
+
+    구조체의 경우에서느 self를 생략하는 것도 가능해졌다. 
+
+    ```swift
+    class SomeThing {
+        let name = "누군가"
+        
+        func doSomething() { [self] in
+            DispatchQueue.main.async {
+                print("나의 이름은 \(name)")
+            }
+        }
+    }
+    ```
+
+    
+
 클래스뿐 아니라 클로저에서도 강한 순환 참조가 일어난다. 클로저도 참조 타입이기 때문이다.
 
 클래스 인스턴스의 프로퍼티에 클로저를 할당할 때 클로저에 참조를 할당하기 때문에 강한 순환 참조가 발생할 수 있고, 클로저의 본문이 인스턴스를 캡처할 때 클로저가 self를 캡처하게 되면서 강한 순환 참조가 발생할 수 있다.
