@@ -1,8 +1,16 @@
-출처
+앱이 시작될 때, 앱을 담당하는 메인 런루프가 생성된다. 이벤트 처리(화면의 터치, 화면 돌리기 등)를 담당하며 어떤 함수를 실행시킬 것인지 선택하고 실행하는 역할이다.
 
- https://developer.apple.com/documentation/uikit/1622933-uiapplicationmain
+함수 등의 실행 결과를 화면에 보여줘야 하며 화면을 다시 그리는 일이 필요할 때 화면을 다시 그리게 된다. 
 
-https://developer.apple.com/documentation/uikit/app_and_environment/responding_to_the_launch_of_your_app/about_the_app_launch_sequence
+메인 쓰레드는 1초에 60번 화면을 다시 그려야하는 역할도 가지고 있다. (지시하는 위치) 그렇기 때문에 
+
+작업을 하는 시간이 오래 걸리게 되면(네트워크 작업) 1초에 60번 화면을 다시 그려야하는 역할도 하기 때문에 
+
+버벅이는 현상이 일어나게 된다. 다시 말에 시간이 오래 걸리는 작업을 하고 다음 작업으로 넘어갈 때, 그 찰나에 화면을 다시 
+
+그리기 때문에 버벅이는 것이다. 
+
+
 
 <img src="https://docs-assets.developer.apple.com/published/52c7b459e7/76e68c08-6b09-4bac-8a00-44df7a097a43.png" alt="When an app launches, it loads its main UI file, asks the app delegate to initialize the app's data structures, and restores any previous interface state. " style="zoom:50%;" />
 
@@ -55,3 +63,8 @@ UIApplicationMain에 의해 생성되는 객체는 UIApplication 객체입니다
 
 
 
+출처
+
+ https://developer.apple.com/documentation/uikit/1622933-uiapplicationmain
+
+https://developer.apple.com/documentation/uikit/app_and_environment/responding_to_the_launch_of_your_app/about_the_app_launch_sequence

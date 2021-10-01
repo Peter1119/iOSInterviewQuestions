@@ -20,6 +20,16 @@ https://babbab2.tistory.com/68)
 
 ![img](https://media.vlpt.us/images/zeke/post/8fec2313-8bb2-46a0-9e1e-7771629d3870/9936863F5ACA0D5C06.png)
 
+아이폰은 1초에 60번을 그린다(60Hz)-> 무한 반복문이 계속 도는 것 (화면 주사율)
+
+Update Cycle은 1/60초 주기마다 화면을 다시 그린다. 
+
+Main Run Loop는 필요한 일처리를 하는 CPU이고 3.5GHz인 경우 1초에 35억번의 일처리를 한다는 뜻이다. 
+
+화면을 다시 그리는 일은 1번 쓰레드가 한다.(Main Thread)
+
+
+
 main run loop에서 이벤트가 처리되는 과정에서 크기나 위치가 이동하는 애니메이션과 같은 layout이나 position값을 바꾸는 핸들러가 실행될 때가 있는데, 이러한 변화는 즉각적으로 반영되는 것이 아니다. 
 
 시스템은 이런 변화하는 view를 체크하고 모든 핸들러가 종료된 후에 main run loop로 권한이 돌아오는 update cycle 시점에 view들의 값을 바꿔주어 position이나 layout의 변화를 적용시킨다. 
