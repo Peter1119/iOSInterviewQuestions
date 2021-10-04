@@ -195,6 +195,10 @@ URLSession은 iOS에서 제공하는 HTTP를 이용한 네트워킹을 통해 �
 
 
 
+URLSession은 비동기 처리 방식으로 작동하도록 애플이 설계를 해놓았다. 
+
+
+
 URLSession은 URLSessionConfiguration을 통해 생성할 수 있다. 이렇게 생성된 URLSession을 통해 한 개 이상의 URLSessionTask를 생성할 수 있으며, 이 URLSessionTask를 통해 실제로 서버와 통신을 할 수 있다. 
 
 
