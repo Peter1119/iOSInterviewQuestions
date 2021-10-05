@@ -7,7 +7,7 @@ title : Frame과 Bounds
 
 Frame과 Bounds는 UIView의 instance property로 둘 다 CGRect이다. 
 
-여기서 CGRect을 간단히 설명하자면 구조체로서 구조체 변수로 CGPoint, CGSize를 갖고 있다. 따라서 자신의 위치(CGPoint)를 갖는 가로와 세로 길이가 존재(CGSize)하는 사각형이다. 여기서 CGPoint는 사각형기준 왼쪽 위의 점을 기준으로 하며 (0, 0) 기준으로 양의 방향은 x축 오른쪽, y축 <u>아래쪽</u>이다.
+여기서 CGRect을 간단히 설명하자면 구조체로서 구조체 변수로 CGPoint, CGSize를 갖고 있다. 따라서 자신의 위치(CGPoint)를 갖는 가로와 세로 길이가 존재(CGSize)하는 사각형이다. 여기서 CGPoint는 사각형기준 왼쪽 위의 점을 기준으로 하며 (0, 0) 기준으로 양의 방향은 x축 오른쪽, y축 아래쪽이다.
 
 그렇다면 차이는 무엇일까? 
 
@@ -74,6 +74,14 @@ class ViewController: UIViewController {
         greenView.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
         blackView.frame = CGRect(x: 200, y: 200, width: 50, height: 50)
 
+//      view.addSubview(superView)
+//      view.addSubview(subView)
+        
+        view.addSubview(yelloewView)
+        yelloewView.addSubview(greenView)
+        view.addSubview(blackView)
+      
+      
         UIViewPropertyAnimator(duration: 3, curve: .easeOut) {
             self.yelloewView.bounds.origin = CGPoint(x: 50, y: 50) //
             self.greenView.bounds.origin = CGPoint(x: -100, y: -100) //yellowView에 영향을 받음
@@ -81,12 +89,6 @@ class ViewController: UIViewController {
         } .startAnimation()
         
         
-//        view.addSubview(superView)
-//        view.addSubview(subView)
-        
-        view.addSubview(yelloewView)
-        yelloewView.addSubview(greenView)
-        view.addSubview(blackView)
         
         print("yelloewView bound의 x, y 좌표 : \(yelloewView.bounds.origin.x), \(yelloewView.bounds.origin.y)") //yelloewView bound의 x, y 좌표 : 50.0, 50.0
         print("greenView bound의 x, y 좌표 : \(greenView.bounds.origin.x), \(greenView.bounds.origin.y)") //greenView bound의 x, y 좌표 : -100.0, -100.0

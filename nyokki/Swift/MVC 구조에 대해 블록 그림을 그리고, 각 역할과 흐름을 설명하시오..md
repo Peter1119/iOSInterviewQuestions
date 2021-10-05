@@ -27,6 +27,8 @@ Controller
 
 하지만 ViewController가 강하게 연결되어 있어 View Controller가 거의 모든 일을 수행함
 
+View와 Model이 직접적으로 연관되어 있다. 따라서 오류가 생겨났을 경우 디버그가 쉽지 않고, 재사용성이 떨어진다. 
+
 
 
 참고
